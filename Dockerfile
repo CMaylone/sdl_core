@@ -19,3 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         sudo \
         supervisor \
         sqlite3     
+        
+RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+
+USER docker

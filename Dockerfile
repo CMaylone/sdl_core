@@ -1,5 +1,5 @@
 # This image is based of debian with curl preinstalled
-FROM buildpack-deps:jessie-curl
+FROM ubuntu
 
 MAINTAINER Corey Maylone version:0.1
 
@@ -21,7 +21,3 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         sqlite3
         
 RUN ldconfig
-
-RUN useradd -m jenkins && echo "jenkins:jenkins" | chpasswd && adduser jenkins sudo
-
-USER jenkins

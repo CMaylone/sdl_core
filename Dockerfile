@@ -20,6 +20,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         supervisor \
         sqlite3     
         
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
-USER docker
+USER jenkins

@@ -18,4 +18,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python \
         sudo \
         supervisor \
-        sqlite3     
+        sqlite3
+        
+RUN ldconfig

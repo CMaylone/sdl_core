@@ -1,5 +1,5 @@
 # This image is based of debian with curl preinstalled
-FROM ubuntu
+FROM buildpack-deps:jessie-curl
 
 MAINTAINER Corey Maylone version:0.1
 
@@ -22,4 +22,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         
 RUN ldconfig
 
-USER root
+RUN useradd -u 999 jenkins

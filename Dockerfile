@@ -22,4 +22,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         
 RUN ldconfig
 
-RUN adduser -r -u 999 jenkins
+RUN adduser -u 999 jenkins

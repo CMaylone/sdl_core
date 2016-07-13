@@ -23,3 +23,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN ldconfig
 
 RUN adduser -u 999 jenkins
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers

@@ -5,3 +5,4 @@ build me
 test
 test
 test
+build!

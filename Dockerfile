@@ -21,3 +21,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         sqlite3
         
 RUN ldconfig
+
+RUN adduser -g 998 -u 999 jenkins
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
